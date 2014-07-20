@@ -35,7 +35,7 @@ class ofxFTGLESSimpleLayout
         void		setLineSpacing(float spacing);
 
         ofxFTGLESTextAlignment getAlignment() const;
-        void setAlignment(ofxFTGLTextAlignment alignment);
+        void setAlignment(ofxFTGLESTextAlignment alignment);
 
         FTSimpleLayout* layout;
 };
