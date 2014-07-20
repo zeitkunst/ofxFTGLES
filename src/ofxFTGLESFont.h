@@ -30,6 +30,7 @@ class ofxFTGLESFont {
 	void 		drawString(string s, float x, float y);
 	float 		stringHeight(string c);
 	float 		stringWidth(string c);
+    void        setUseDisplayList(bool useDisplayList);
 	
     FTFont*  font;
   protected:

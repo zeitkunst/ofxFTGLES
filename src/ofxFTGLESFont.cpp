@@ -49,6 +49,10 @@ bool ofxFTGLESFont::loadFont(string filename, float fontsize, bool _bAntiAliased
     return true;
 }
 
+void ofxFTGLESFont::setUseDisplayList(bool setUseDisplayList) {
+    font->UseDisplayList(setUseDisplayList);
+}
+
 float ofxFTGLESFont::getSpaceSize(){
 	return stringWidth(" ");
 }
