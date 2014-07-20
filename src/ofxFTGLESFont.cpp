@@ -11,7 +11,7 @@ ofxFTGLESFont::~ofxFTGLESFont(){
     }
 }
 
-void ofxFTGLFontES::unload()
+void ofxFTGLESFont::unload()
 {
     if (font != NULL) {
         delete font;
