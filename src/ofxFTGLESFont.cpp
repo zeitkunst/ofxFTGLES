@@ -11,6 +11,17 @@ ofxFTGLESFont::~ofxFTGLESFont(){
     }
 }
 
+void ofxFTGLFontES::unload()
+{
+    if (font != NULL) {
+        delete font;
+        font = NULL;
+    }
+    
+    loaded = false;
+}
+
+
 bool ofxFTGLESFont::loadFont(string filename, float fontsize, bool _bAntiAliased, bool _bFullCharacterSet, bool makeContours, float simplifyAmnt, int dpi){
 	fontsize *= 2;
 	
