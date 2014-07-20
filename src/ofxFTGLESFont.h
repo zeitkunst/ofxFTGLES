@@ -30,5 +30,7 @@ class ofxFTGLESFont {
   protected:
     bool loaded;
     float lineHeight;
+    FTPoint trackingPoint;
+
 };
 

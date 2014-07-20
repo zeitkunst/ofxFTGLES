@@ -38,6 +38,12 @@ bool ofxFTGLESFont::loadFont(string filename, float fontsize, bool _bAntiAliased
     return true;
 }
 
+float ofxFTGLESFont::getSpaceSize(){
+	return stringWidth(" ");
+}
+
+// TODO
+// Pull from ofxFTGL implementation
 float ofxFTGLESFont::stringWidth(string c){
     ofRectangle rect = getStringBoundingBox(c, 0,0);
     return rect.width;
@@ -57,6 +63,17 @@ void ofxFTGLESFont::setSize(int size){
 	    font->FaceSize(size);
     }
 }
+
+void ofxFTGLESFont::setTracking(float tracking)
+{
+    trackingPoint.X(tracking);
+}
+
+float ofxFTGLESFont::getTracking() const
+{
+    return trackingPoint.Xf();
+}
+
 
 float ofxFTGLESFont::getLineHeight(){
 	return lineHeight;
@@ -87,7 +104,8 @@ void ofxFTGLESFont::drawString(string s, float x, float y){
     glTranslatef(x, y, 0);
     glScalef(1,-1,1);
 
-    font->Render(s.c_str());
+    //font->Render(s.c_str());
+    font->Render(s.c_str(), -1, FTPoint(), trackingPoint);
     glPopMatrix();
 }
 
@@ -95,6 +113,7 @@ void ofxFTGLESFont::drawString(wstring s, float x, float y){
     glPushMatrix();
     glTranslatef(x, y, 0);
     glScalef(1,-1,1);
-    font->Render((wchar_t*)s.c_str());
+    //font->Render((wchar_t*)s.c_str());
+    font->Render((wchar_t*)s.c_str(), -1, FTPoint(), trackingPoint);
     glPopMatrix();
 }
