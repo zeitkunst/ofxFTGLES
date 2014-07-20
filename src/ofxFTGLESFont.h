@@ -19,7 +19,7 @@ class ofxFTGLESFont {
     float getTracking() const;
    
 	void 		setSize(int size);
-    float getSpaceSize();
+    float       getSpaceSize();
 	float 		getLineHeight();
     void		setLineHeight(float newHeight);
 	ofRectangle getStringBoundingBox(wstring s, float x, float y);
