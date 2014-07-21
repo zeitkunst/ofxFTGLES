@@ -31,7 +31,8 @@ class ofxFTGLESFont {
 	float 		stringHeight(string c);
 	float 		stringWidth(string c);
     void        setUseDisplayList(bool useDisplayList);
-	
+    void        setColor(float r, float g, float b, float a);
+
     FTFont*  font;
   protected:
     bool loaded;

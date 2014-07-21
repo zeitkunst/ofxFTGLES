@@ -53,6 +53,11 @@ void ofxFTGLESFont::setUseDisplayList(bool setUseDisplayList) {
     font->UseDisplayList(setUseDisplayList);
 }
 
+void ofxFTGLESFont::setColor(float r, float g, float b, float a) {
+    font->SetColor(r/255.0, g/255.0, b/255.0, a/255.0);
+}
+
+
 float ofxFTGLESFont::getSpaceSize(){
 	return stringWidth(" ");
 }

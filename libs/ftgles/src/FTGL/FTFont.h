@@ -201,6 +201,17 @@ class FTGL_EXPORT FTFont
         virtual void UseDisplayList(bool useList);
 
         /**
+         * Set the current font color
+         *
+         * @param  Red
+         * @param  Green
+         * @param  Blue
+         * @param  Alpha
+         */
+        virtual void SetColor(float r, float g, float b, float a);
+
+
+        /**
          * Get the global ascender height for the face.
          *
          * @return  Ascender height
@@ -361,7 +372,8 @@ class FTGL_EXPORT FTFont
 	
 	virtual void PostRender();
 	
-	
+
+
         /**
          * Queries the Font for errors.
          *
@@ -521,6 +533,18 @@ FTGL_EXPORT void ftglSetFontOutset(FTGLfont* font, float front, float back);
  *                 0 turns OFF display lists.
  */
 FTGL_EXPORT void ftglSetFontDisplayList(FTGLfont* font, int useList);
+
+/**
+ * Set the font color
+ *
+ * @param font  An FTGLfont* object.
+ * @param r     Red
+ * @param g     Green
+ * @param b     Blue
+ * @param a     Alpha
+ */
+FTGL_EXPORT void ftglSetFontColor(FTGLfont* font, float r, float g, float b, float a);
+
 
 /**
  * Get the global ascender height for the face.
