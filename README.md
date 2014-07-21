@@ -1,8 +1,11 @@
 ofxFTGLES
 =========
 
-ftgles opengles font library for iphone
+Fork of ftgles opengles font library for iphone
 from https://github.com/cdave1/ftgles
+
+This fork enables ofxFTGLES for the Raspberry Pi. It adds an additional method, `ofxFTGLESFont::setColor` to enable the setting of the font color, as we're not able to do this through the usual ofColor. This requires a specially compiled version of libftgl that is not currently present in this repository; you can find my forked version of FTGLES at https://github.com/zeitkunst/ftgles.
+
 Introduction
 ------------
 
@@ -30,7 +33,7 @@ Dependencies
 Compatibility
 ------------
 
-of_v0073_ios_release
+`of_v0.8.3_linuxarmv6l_release`
 
 Known issues
 ------------
